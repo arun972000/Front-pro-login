@@ -17,7 +17,7 @@ function App() {
         <Route path="/register" element={<RegistrationForm/>}/>
         <Route path="/passreset" element={<ResetPass/>}/>
         <Route path="/verifypass" element={<Verify/>}/>
-        <Route path="passResetForm" element={<ResetPasswordForm/>}/>
+        <Route path="/passResetForm" element={<ResetPasswordForm/>}/>
       </Routes>
     </>
   )
