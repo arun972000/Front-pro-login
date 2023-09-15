@@ -1,0 +1,12 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("https://wallpaperaccess.com/full/2314950.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh; /* Set the height to 100% of viewport height */
+}
