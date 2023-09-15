@@ -12,7 +12,7 @@ const ResetPass = () => {
   const passreset = async () => {
     try {
      const res=await axios.post(`${Url}api/resetPass`, { email });
-     localStorage.setItem("token",res.data)
+     localStorage.setItem("resetToken",res.data)
       alert('Please check your mail inbox to verify');
       navigate('/');
     } catch (err) {
