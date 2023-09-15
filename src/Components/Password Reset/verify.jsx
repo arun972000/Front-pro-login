@@ -7,6 +7,8 @@ const Verify = () => {
   const [verified, setVerified] = useState(false);
   const navigate=useNavigate()
 
+ 
+
   useEffect(() => {
     const resetToken = localStorage.getItem("resetToken");
     const paramsToken = params.get('token');

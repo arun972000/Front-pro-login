@@ -1,6 +1,7 @@
 import axios from "axios"
 import { Url } from "../Url"
 import { useNavigate } from "react-router-dom"
+// import Verify from "./verify"
 
 import { useState } from "react"
 
@@ -11,7 +12,8 @@ const ResetPass = () => {
   const passreset = async () => {
     try{
       const res = await axios.post(`${Url}api/resetPass`, { email })
-      localStorage.setItem("resetToken", res.data)
+      const {token}=res.data;
+      console.log(token)
       alert("please check your mail inbox to verify")
       navigate("/")
     }catch(err){
@@ -34,6 +36,7 @@ const ResetPass = () => {
                     id="email" />
                     <div className="text-center">
                     <button className="btn btn-primary" onClick={passreset}>submit</button>
+                    {/* {token && <Verify token={token}/>} */}
                     </div>
                   
                 </div>
