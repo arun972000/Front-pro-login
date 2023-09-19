@@ -6,6 +6,7 @@ import Verify from './Components/Password Reset/verify'
 import ResetPass from './Components/Password Reset/resetPass'
 import { Routes, Route } from "react-router-dom"
 import RegistrationForm from './Components/Register'
+import ProtectRoute from './Components/ProtectRoute'
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
         <Route path="/register" element={<RegistrationForm/>}/>
         <Route path="/passreset" element={<ResetPass/>}/>
         <Route path="/verifypass" element={<Verify/>}/>
-        <Route path="/passResetForm" element={<ResetPasswordForm/>}/>
+        <Route path="/passResetForm" element={<ProtectRoute element={<ResetPasswordForm/>}/>}/>
       </Routes>
     </>
   )

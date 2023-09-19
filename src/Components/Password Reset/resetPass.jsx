@@ -14,7 +14,7 @@ const ResetPass = () => {
      const res=await axios.post(`${Url}api/resetPass`, { email });
      localStorage.setItem("resetToken",res.data)
       alert('Please check your mail inbox to verify');
-      navigate('/');
+      navigate('/verifypass');
     } catch (err) {
       alert('Enter a valid email');
     }

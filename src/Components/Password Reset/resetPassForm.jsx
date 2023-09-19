@@ -4,7 +4,7 @@ import { Url } from "../Url";
 import { useNavigate } from "react-router-dom";
 
 function ResetPasswordForm() {
-  const navigate=useNavigate()
+  const navigate = useNavigate()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -25,6 +25,7 @@ function ResetPasswordForm() {
     if (password == confirmPassword) {
       updatePass()
       alert("Password changed successfully")
+      localStorage.removeItem("verifyToken")
       navigate("/")
     } else {
       alert("both password field should be same")
