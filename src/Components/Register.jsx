@@ -22,11 +22,11 @@ function RegistrationForm() {
     const apicall = async () => {
         try {
             await axios.post(`${Url}api/register`, formData);
-            // The API call was successful, now navigate
+           
             navigate("/");
         } catch (error) {
-            // Handle API call errors here
-            console.error("API call failed:", error);
+            
+            alert(error)
         }
     };
 
