@@ -1,20 +1,20 @@
 import axios from "axios"
 import { Url } from "../Url"
-import { useNavigate } from "react-router-dom"
+
 import { useState } from "react"
 
 
 const ResetPass = () => {
   const [email, setemail] = useState('');
  // State to hold the verify_link
-  const navigate = useNavigate();
+
 
   const passreset = async () => {
     try {
      const res=await axios.post(`${Url}api/resetPass`, { email });
      localStorage.setItem("resetToken",res.data)
       alert('Please check your mail inbox to verify');
-      navigate('/login');
+      
     } catch (err) {
       alert('Enter a valid email');
     }
