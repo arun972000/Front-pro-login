@@ -17,7 +17,7 @@ const PasswordVerify = () => {
     try {
       await axios.post(`${Url}api/tokenVerify`, { token:params.get("token") })
       localStorage.setItem("verifyToken",params.get("token"))
-      navigate("/passwordForm")
+      navigate("/passResetForm")
     } catch (err) {
       console.log(err)
       setVerificationStatus('Token is invalid.');
